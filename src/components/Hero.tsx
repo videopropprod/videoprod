@@ -121,132 +121,23 @@ export function Hero() {
               transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s",
             }}
           >
-            <div
+            <button
+              onClick={scrollToPortfolio}
               style={{
-                borderTop: "2px solid #000",
-                paddingTop: 16,
-                maxWidth: 480,
+                padding: isMobile ? "14px 24px" : "16px 36px",
+                border: "2px solid #000",
+                backgroundColor: "transparent",
+                color: "#000",
+                fontFamily: FONT_MONO,
+                fontSize: isMobile ? 11 : 12,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                fontWeight: 700,
+                cursor: "pointer",
               }}
             >
-              <p
-                style={{
-                  fontFamily: FONT_MONO,
-                  fontSize: isMobile ? 12 : 13,
-                  color: "rgba(0,0,0,0.55)",
-                  lineHeight: 1.8,
-                }}
-              >
-                Полный цикл видеопроизводства — подкасты, репортажи, выездные
-                съёмки, интервью. Берём на себя{" "}
-                <span
-                  style={{
-                    backgroundColor: "#FF3D00",
-                    color: "#fff",
-                    padding: "1px 5px",
-                    fontWeight: 700,
-                  }}
-                >
-                  ВСЁ
-                </span>
-                .
-              </p>
-            </div>
-
-            <div
-              style={{
-                marginTop: 24,
-                display: "flex",
-                gap: 12,
-                flexWrap: "wrap",
-              }}
-            >
-              <button
-                style={{
-                  position: "relative",
-                  padding: isMobile ? "14px 24px" : "16px 36px",
-                  backgroundColor: "#000",
-                  color: "#fff",
-                  fontFamily: FONT_MONO,
-                  fontSize: isMobile ? 11 : 12,
-                  letterSpacing: "0.15em",
-                  textTransform: "uppercase",
-                  fontWeight: 700,
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
-                Обсудить проект
-                <div
-                  style={{
-                    position: "absolute",
-                    top: -4,
-                    right: -4,
-                    width: 12,
-                    height: 12,
-                    backgroundColor: "#FF3D00",
-                  }}
-                />
-              </button>
-              <button
-                onClick={scrollToPortfolio}
-                style={{
-                  padding: isMobile ? "14px 24px" : "16px 36px",
-                  border: "2px solid #000",
-                  backgroundColor: "transparent",
-                  color: "#000",
-                  fontFamily: FONT_MONO,
-                  fontSize: isMobile ? 11 : 12,
-                  letterSpacing: "0.15em",
-                  textTransform: "uppercase",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                }}
-              >
-                Портфолио ↓
-              </button>
-            </div>
-          </div>
-
-          <div
-            style={{
-              marginTop: isMobile ? 36 : 56,
-              display: "flex",
-              gap: isMobile ? 28 : 48,
-              flexWrap: "wrap",
-              opacity: loaded ? 1 : 0,
-              transform: loaded ? "translateY(0)" : "translateY(30px)",
-              transition: "all 1s ease 1s",
-            }}
-          >
-            {[
-              { num: "200+", label: "Проектов" },
-              { num: "7+", label: "Лет опыта" },
-            ].map((s, i) => (
-              <div key={i}>
-                <p
-                  style={{
-                    fontFamily: FONT_DISPLAY,
-                    fontSize: isMobile ? 28 : 36,
-                    color: "#000",
-                    letterSpacing: "0.02em",
-                  }}
-                >
-                  {s.num}
-                </p>
-                <p
-                  style={{
-                    fontFamily: FONT_MONO,
-                    fontSize: 9,
-                    color: "rgba(0,0,0,0.3)",
-                    letterSpacing: "0.2em",
-                    textTransform: "uppercase",
-                    marginTop: 2,
-                  }}
-                >
-                  {s.label}
-                </p>
-              </div>
-            ))}
+              Портфолио ↓
+            </button>
           </div>
         </div>
       </div>

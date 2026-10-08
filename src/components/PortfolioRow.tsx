@@ -23,6 +23,7 @@ export function PortfolioRow({
   const isReel = item.format === "9:16";
   const isRed = item.bg === "#FF3D00";
   const isReversed = index % 2 === 1;
+  const playHref = item.playUrl ?? item.videoSrc;
 
   const thumbnail = (
     <div
@@ -105,6 +106,15 @@ export function PortfolioRow({
       </div>
 
       {/* Play button */}
+      {playHref && (
+        <a
+          href={playHref}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Открыть видео: ${item.title ?? item.category}`}
+          style={{ position: "absolute", inset: 0, zIndex: 4 }}
+        />
+      )}
       <div
         style={{
           position: "absolute",

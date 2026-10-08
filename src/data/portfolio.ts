@@ -47,45 +47,31 @@ export const portfolio: PortfolioItem[] = [
       "https://drive.google.com/file/d/1_NW4_2RlwB9LrCVnWW2AWI7o17JCYR7Q/view?usp=sharing",
   },
   {
-    title: "ПМЭФ 2025: обзорный репортаж",
-    category: "Репортаж",
-    year: "2025",
-    desc: "Интервью, атмосфера форума и динамичный монтаж ключевых событий.",
-    bg: "#FF3D00",
-    format: "16:9",
-    videoSrc: new URL(
-      "../assets/ПМЭФ 2025 обзорный репортаж HD.mp4",
-      import.meta.url
-    ).href,
-    playUrl:
-      "https://drive.google.com/file/d/1-KDWj8wn5cxznQMhk3cyz1QMers5A-WP/view?usp=sharing",
-  },
-  {
-    title: "ПМЭФ 2024: интервью с Анной Цивилевой",
+    title: "Экономика решений — Евгений Токаренко",
     category: "Интервью",
-    year: "2024",
-    desc: "Деловое интервью с форума в аккуратном репортажном формате.",
+    year: "",
+    desc: "«Экономика решений» с Евгением Токаренко.",
     bg: "#1a1a1a",
     format: "16:9",
     videoSrc: new URL(
-      "../assets/ПМЭФ 2024. интервью Анна Цивилева.mp4",
+      "../assets/Экономика решений Евгений Токаренко HD.mp4",
       import.meta.url
     ).href,
     playUrl:
-      "https://drive.google.com/file/d/1MbuFZbNxRfRB28M0aO6D1OdRXi576MrW/view?usp=sharing",
+      "https://drive.google.com/file/d/1F_w3CcWgBo1bTh8J-hUwOLBgC5TntVee/view?usp=sharing",
   },
   {
-    title: "BRASS на выставке «Мебель 2024»",
-    category: "Репортаж",
-    year: "2024",
-    desc: "Репортаж о компании BRASS и её стенде на отраслевой выставке.",
+    title: "Тизер «Сады Придонья»",
+    category: "Тизер",
+    year: "",
+    desc: "«Сады Придонья».",
     bg: "#0d0d0d",
     format: "16:9",
     videoSrc: new URL(
-      "../assets/Репортаж Мебель 2024 extended.mp4",
+      "../assets/Тизер Сады Придонья 2.mp4",
       import.meta.url
     ).href,
     playUrl:
-      "https://drive.google.com/file/d/1xm0LQenijy8MX9upa6JyM13pSkg_jJCr/view?usp=sharing",
+      "https://drive.google.com/file/d/15bZisnlN92i3fI8G6vr1jzW6N8-rJG4H/view?usp=sharing",
   },
 ];

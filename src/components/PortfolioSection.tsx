@@ -70,18 +70,7 @@ export function PortfolioSection() {
             marginBottom: 16,
           }}
         >
-          <div style={{ width: 48, height: 4, backgroundColor: "#FF3D00" }} />
-          <span
-            style={{
-              fontFamily: FONT_MONO,
-              fontSize: 10,
-              letterSpacing: "0.4em",
-              color: "rgba(0,0,0,0.3)",
-              textTransform: "uppercase",
-            }}
-          >
-            Портфолио
-          </span>
+
         </div>
         <h2
           style={{

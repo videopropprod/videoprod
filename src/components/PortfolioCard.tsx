@@ -122,11 +122,13 @@ export function PortfolioCard({
           rel="noreferrer"
           aria-label={`Открыть видео: ${item.title ?? item.category}`}
           onClick={(e) => e.stopPropagation()}
-          style={playButtonStyle}
+          style={{ position: "absolute", inset: 0, zIndex: 3 }}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
-            <path d="M8 5v14l11-7z" />
-          </svg>
+          <span style={playButtonStyle}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </span>
         </a>
       )}
 

@@ -172,25 +172,6 @@ export function Services() {
               ))}
             </div>
 
-            {s.accent && (
-              <div
-                style={{
-                  position: "absolute",
-                  top: 16,
-                  right: 16,
-                  fontFamily: FONT_MONO,
-                  fontSize: 9,
-                  fontWeight: 700,
-                  letterSpacing: "0.15em",
-                  color: "#000",
-                  backgroundColor: "#fff",
-                  padding: "4px 10px",
-                  textTransform: "uppercase",
-                }}
-              >
-                Под ключ
-              </div>
-            )}
           </div>
         ))}
       </div>

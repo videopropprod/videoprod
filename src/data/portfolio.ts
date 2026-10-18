@@ -3,7 +3,6 @@ import shots2Video from "../assets/shots-2-igor-zhilenko-tech.mp4?url";
 export type PortfolioItem = {
   title?: string;
   category: string;
-  year: string;
   desc: string;
   bg: string;
   format: "16:9" | "9:16";
@@ -15,7 +14,6 @@ export const portfolio: PortfolioItem[] = [
   {
     title: "Фильм о производстве «Батыр-Бройлер»",
     category: "Документальный фильм",
-    year: "2026",
     desc: "Производственный фильм о семейном бизнесе: съёмка, монтаж и пост-продакшен.",
     bg: "#1a1a1a",
     format: "16:9",
@@ -29,16 +27,14 @@ export const portfolio: PortfolioItem[] = [
   {
     title: "Подкаст с Петром Самохиным",
     category: "Подкаст",
-    year: "2025",
     desc: "Первый вице-президент по продажам компании «Сады Придонья».",
     bg: "#0d0d0d",
     format: "16:9",
-    videoSrc: new URL("../assets/Тизер.mp4", import.meta.url).href,
+    videoSrc: new URL("../assets/Тизер-start-2-5.mp4", import.meta.url).href,
   },
   {
-    title: "Рилс: Игорь Жиленко",
-    category: "Reels",
-    year: "2025",
+    title: "Игорь Жиленко",
+    category: "Интервью",
     desc: "Основатель «Экомобайл» — о том, как не отставать от технологий.",
     bg: "#111",
     format: "9:16",
@@ -49,7 +45,6 @@ export const portfolio: PortfolioItem[] = [
   {
     title: "Экономика решений — Евгений Токаренко",
     category: "Интервью",
-    year: "",
     desc: "«Экономика решений» с Евгением Токаренко.",
     bg: "#1a1a1a",
     format: "16:9",
@@ -63,7 +58,6 @@ export const portfolio: PortfolioItem[] = [
   {
     title: "Тизер «Сады Придонья»",
     category: "Тизер",
-    year: "",
     desc: "«Сады Придонья».",
     bg: "#0d0d0d",
     format: "16:9",
@@ -73,5 +67,38 @@ export const portfolio: PortfolioItem[] = [
     ).href,
     playUrl:
       "https://drive.google.com/file/d/15bZisnlN92i3fI8G6vr1jzW6N8-rJG4H/view?usp=sharing",
+  },
+  {
+    title: "Подкаст «По стройке смирно», выпуск №1",
+    category: "Подкаст",
+    desc: "",
+    bg: "#1a1a1a",
+    format: "16:9",
+    videoSrc: new URL(
+      "../assets/podcast-po-stroyke-smirno-1.mp4",
+      import.meta.url
+    ).href,
+  },
+  {
+    title: "Экономика решений — Алексей Телков",
+    category: "Интервью",
+    desc: "",
+    bg: "#0d0d0d",
+    format: "16:9",
+    videoSrc: new URL(
+      "../assets/Экономика решений Алексей Телков HD.mp4",
+      import.meta.url
+    ).href,
+  },
+  {
+    title: "Экономика решений — Эльдар Мамедов",
+    category: "Интервью",
+    desc: "",
+    bg: "#1a1a1a",
+    format: "16:9",
+    videoSrc: new URL(
+      "../assets/Экономика решений Эльдар Мамедов HD.mp4",
+      import.meta.url
+    ).href,
   },
 ];

@@ -163,15 +163,6 @@ export function PortfolioCard({
           >
             {item.category}
           </span>
-          <span
-            style={{
-              fontFamily: FONT_MONO,
-              fontSize: 9,
-              color: "rgba(255,255,255,0.3)",
-            }}
-          >
-            {item.year}
-          </span>
         </div>
         {item.title && (
           <h3

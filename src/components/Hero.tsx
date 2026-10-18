@@ -1,10 +1,38 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { FONT_DISPLAY, FONT_MONO } from "../styles/constants";
 
 export function Hero() {
   const [loaded, setLoaded] = useState(false);
+  const headingRef = useRef<HTMLHeadingElement>(null);
   const isMobile = useIsMobile();
+
+  useLayoutEffect(() => {
+    const heading = headingRef.current;
+    if (!heading) return;
+
+    const fitHeading = () => {
+      heading.style.fontSize = "100px";
+      const range = document.createRange();
+      range.selectNodeContents(heading);
+      const textWidth = range.getBoundingClientRect().width;
+      if (textWidth > 0) {
+        heading.style.fontSize = `${(heading.clientWidth / textWidth) * 100}px`;
+      }
+    };
+
+    fitHeading();
+    const observer = new ResizeObserver(fitHeading);
+    observer.observe(heading.parentElement!);
+    let active = true;
+    document.fonts.ready.then(() => {
+      if (active) fitHeading();
+    });
+    return () => {
+      active = false;
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 100);
@@ -72,7 +100,7 @@ export function Hero() {
           padding: `0 ${px}px 40px`,
         }}
       >
-        <div style={{ maxWidth: 900, width: "100%" }}>
+        <div style={{ width: "100%", minWidth: 0 }}>
           <div
             style={{
               opacity: loaded ? 1 : 0,
@@ -81,35 +109,18 @@ export function Hero() {
             }}
           >
             <h1
+              ref={headingRef}
               style={{
                 fontFamily: FONT_DISPLAY,
-                fontSize: isMobile
-                  ? "clamp(1.6rem, 9.5vw, 3.2rem)"
-                  : "clamp(3.2rem, 10vw, 9rem)",
+                fontSize: "7vw",
                 lineHeight: 0.9,
                 color: "#000",
                 textTransform: "uppercase",
                 margin: 0,
-                overflowWrap: "break-word",
-                wordBreak: "break-word",
+                whiteSpace: "nowrap",
               }}
             >
               ВИДЕОПРОДАКШН
-            </h1>
-            <h1
-              style={{
-                fontFamily: FONT_DISPLAY,
-                fontSize: isMobile
-                  ? "clamp(1.6rem, 9.5vw, 3.2rem)"
-                  : "clamp(3.2rem, 10vw, 9rem)",
-                lineHeight: 0.9,
-                color: "#FF3D00",
-                textTransform: "uppercase",
-                margin: 0,
-                marginTop: 4,
-              }}
-            >
-              ПОД КЛЮЧ
             </h1>
           </div>
 
@@ -167,7 +178,6 @@ export function Hero() {
               "ИНТЕРВЬЮ",
               "МОНТАЖ",
               "ПРОДЮСИРОВАНИЕ",
-              "REELS",
             ].map((t, i) => (
               <span
                 key={`${si}-${i}`}

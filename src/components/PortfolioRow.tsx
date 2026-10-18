@@ -185,15 +185,6 @@ export function PortfolioRow({
         >
           {item.category}
         </span>
-        <span
-          style={{
-            fontFamily: FONT_MONO,
-            fontSize: 10,
-            color: "rgba(0,0,0,0.2)",
-          }}
-        >
-          {item.year}
-        </span>
       </div>
 
       {item.title && (

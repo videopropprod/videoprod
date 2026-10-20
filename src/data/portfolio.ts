@@ -25,12 +25,15 @@ export const portfolio: PortfolioItem[] = [
       "https://drive.google.com/file/d/1kd2auKsbDB1yYx7qe-Znmk_JjyQUE2rc/view?usp=sharing",
   },
   {
-    title: "Подкаст с Петром Самохиным",
+    title: "Подкаст «По стройке смирно», выпуск №1",
     category: "Подкаст",
-    desc: "Первый вице-президент по продажам компании «Сады Придонья».",
-    bg: "#0d0d0d",
+    desc: "",
+    bg: "#1a1a1a",
     format: "16:9",
-    videoSrc: new URL("../assets/Тизер-start-2-5.mp4", import.meta.url).href,
+    videoSrc: new URL(
+      "../assets/podcast-po-stroyke-smirno-1.mp4",
+      import.meta.url
+    ).href,
   },
   {
     title: "Игорь Жиленко",
@@ -41,19 +44,6 @@ export const portfolio: PortfolioItem[] = [
     videoSrc: shots2Video,
     playUrl:
       "https://drive.google.com/file/d/1_NW4_2RlwB9LrCVnWW2AWI7o17JCYR7Q/view?usp=sharing",
-  },
-  {
-    title: "Экономика решений — Евгений Токаренко",
-    category: "Интервью",
-    desc: "«Экономика решений» с Евгением Токаренко.",
-    bg: "#1a1a1a",
-    format: "16:9",
-    videoSrc: new URL(
-      "../assets/Экономика решений Евгений Токаренко HD.mp4",
-      import.meta.url
-    ).href,
-    playUrl:
-      "https://drive.google.com/file/d/1F_w3CcWgBo1bTh8J-hUwOLBgC5TntVee/view?usp=sharing",
   },
   {
     title: "Тизер «Сады Придонья»",
@@ -69,15 +59,12 @@ export const portfolio: PortfolioItem[] = [
       "https://drive.google.com/file/d/15bZisnlN92i3fI8G6vr1jzW6N8-rJG4H/view?usp=sharing",
   },
   {
-    title: "Подкаст «По стройке смирно», выпуск №1",
+    title: "Подкаст с Петром Самохиным",
     category: "Подкаст",
-    desc: "",
-    bg: "#1a1a1a",
+    desc: "Первый вице-президент по продажам компании «Сады Придонья».",
+    bg: "#0d0d0d",
     format: "16:9",
-    videoSrc: new URL(
-      "../assets/podcast-po-stroyke-smirno-1.mp4",
-      import.meta.url
-    ).href,
+    videoSrc: new URL("../assets/Тизер-start-2-5.mp4", import.meta.url).href,
   },
   {
     title: "Экономика решений — Алексей Телков",

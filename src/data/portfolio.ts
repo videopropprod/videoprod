@@ -25,7 +25,7 @@ export const portfolio: PortfolioItem[] = [
       "https://drive.google.com/file/d/1kd2auKsbDB1yYx7qe-Znmk_JjyQUE2rc/view?usp=sharing",
   },
   {
-    title: "Подкаст «По стройке смирно», выпуск №1",
+    title: "Подкаст «По стройке смирно»",
     category: "Подкаст",
     desc: "",
     bg: "#1a1a1a",
@@ -67,7 +67,7 @@ export const portfolio: PortfolioItem[] = [
     videoSrc: new URL("../assets/Тизер-start-2-5.mp4", import.meta.url).href,
   },
   {
-    title: "Экономика решений — Алексей Телков",
+    title: "Подкаст «Экономика решений» — Алексей Телков",
     category: "Интервью",
     desc: "",
     bg: "#0d0d0d",
@@ -78,7 +78,7 @@ export const portfolio: PortfolioItem[] = [
     ).href,
   },
   {
-    title: "Экономика решений — Эльдар Мамедов",
+    title: "Подкаст «Экономика решений» — Эльдар Мамедов",
     category: "Интервью",
     desc: "",
     bg: "#1a1a1a",
